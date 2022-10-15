@@ -1,9 +1,10 @@
 {
   "name": "qtware-adapter-sdk",
-  "version": "0.0.0",
+  "version": "0.0.1-beta",
   "description": "SDK for qtware wallet adapters derived and credit from salmon-adapter-sdk",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
+  "types": "./lib/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:esm": "tsc --watch",
@@ -24,6 +25,7 @@
   },
   "author": "",
   "license": "Apache-2.0",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/miraland-labs/qtware-adapter-sdk/issues"
   },
