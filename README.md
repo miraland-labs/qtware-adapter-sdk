@@ -1,5 +1,5 @@
 # qtware-adapter-sdk
-SDK for wallet adapters. Derived from salmon-adapter-sdk.
+SDK for wallet adapters. Derived and credit from salmon-adapter-sdk.
 
 ## API
 
