@@ -34,8 +34,8 @@ export default class Qtware extends EventEmitter {
     } else if (typeof window.qtware?.postMessage === 'function') {
       this._provider = window.qtware;
     } else {
-      // this._provider = 'https://app.QtwareWallet.io';
-      this._provider = 'https://qtw.arcaps.com';
+      // this._provider = 'https://app.qtware.io';
+      this._provider = 'https://app.arcaps.com';
     }
   }
 
