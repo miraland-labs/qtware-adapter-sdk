@@ -17,7 +17,7 @@ declare const window: QtwareWindow;
 
 export default class Qtware extends EventEmitter {
   // private _network: Cluster = 'mainnet-beta';
-  private _network: Cluster = 'mainnet-slrt';
+  private _network: Cluster = 'mainnet-mln';
   private _provider: string | QtwareWallet;
   private _adapterInstance: WalletAdapter | null = null;
   private _connectHandler: { resolve: PromiseCallback, reject: PromiseCallback } | null = null;

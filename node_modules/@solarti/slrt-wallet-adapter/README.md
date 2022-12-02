@@ -18,8 +18,8 @@ npm install --save @solarti/slrt-wallet-adapter
 ```js
 import { Connection, SystemProgram, Transaction, clusterApiUrl } from '@solarti/web3.js';
 
-let connection = new Connection(clusterApiUrl('devnet-slrt'));
-let providerUrl = 'https://slrt.arcaps.com';
+let connection = new Connection(clusterApiUrl('devnet-mln'));
+let providerUrl = 'https://app.arcaps.com';
 let wallet = new Wallet(providerUrl);
 wallet.on('connect', publicKey => console.log('Connected to ' + publicKey.toBase58()));
 wallet.on('disconnect', () => console.log('Disconnected'));
@@ -72,7 +72,7 @@ The general flow is as follows:
 
 1. User selects a wallet provider to connect to, e.g. `https://slrt.arcaps.com`
 2. dApp opens the wallet provider in a popup, passing it the [origin](https://developer.mozilla.org/en-US/docs/Glossary/Origin) of the dApp and the desired network in the URL hash.
-    - e.g. `https://slrt.arcaps.com/#origin=https://www.example.com&network=devnet-slrt`
+    - e.g. `https://slrt.arcaps.com/#origin=https://www.example.com&network=devnet-mln`
 3. Wallet provider detects that `window.opener` is set and asks the user if they want to connect the wallet to the dApp.
     - The wallet UI should show the origin of the requesting dApp.
     - The origin can be retrieved from the URL hash using `new URLSearchParams(window.location.hash.slice(1)).get('origin')`.
@@ -96,7 +96,7 @@ Wallet provider developers can use the [example webapp](https://github.com/serum
 ### URL hash parameters
 
 - `origin` - origin of the dApp. Should be included in all `postMessage` calls and should be checked against all received `MessageEvent`s.
-- `network` - The network on which transactions will be sent. Can be any of `mainnet-slrt`, `devnet-slrt`, `testnet-slrt`, or a custom URL, though wallets are free to reject any unsupported networks. Wallet providers should check that transaction blockhashes matches the network before signing the transaction.
+- `network` - The network on which transactions will be sent. Can be any of `mainnet-mln`, `devnet-mln`, `testnet-mln`, or a custom URL, though wallets are free to reject any unsupported networks. Wallet providers should check that transaction blockhashes matches the network before signing the transaction.
 
 The parameters can be parsed using
 
