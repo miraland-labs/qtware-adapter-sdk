@@ -1,4 +1,4 @@
-import WalletAdapter from './base';
+import WalletAdapter from './base.js';
 import { Cluster, Transaction } from '@solarti/web3.js';
 import Wallet from '@solarti/slrt-wallet-adapter';
 import { QtwareWallet } from '../types';

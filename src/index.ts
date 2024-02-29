@@ -6,9 +6,9 @@ import {
   QtwareWindow,
 } from './types';
 import EventEmitter from 'eventemitter3';
-import WalletAdapter from './adapters/base';
-import WebAdapter from './adapters/web';
-import ExtensionAdapter from './adapters/extension';
+import WalletAdapter from './adapters/base.js';
+import WebAdapter from './adapters/web.js';
+import ExtensionAdapter from './adapters/extension.js';
 
 // m17, to resovle '--isolatedModules' flag provided, change to export type, vanilla: export
 export type { QtwareWallet, QtwareConfig } from './types';

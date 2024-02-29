@@ -9,5 +9,5 @@ export interface QtwareConfig {
     network?: Cluster;
     provider?: string | QtwareWallet;
 }
-export declare type PromiseCallback = (...args: unknown[]) => unknown;
+export type PromiseCallback = (...args: unknown[]) => unknown;
 //# sourceMappingURL=types.d.ts.map
